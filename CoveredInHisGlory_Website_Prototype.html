@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Covered in His Glory — Faith Woven Into Every Detail</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --cream:#F6EFDD;
+    --cream-2:#EFE3C4;
+    --parchment:#F1E6C8;
+    --brown:#3E2005;
+    --brown-soft:#5A3A18;
+    --gold:#9C7A2E;
+    --gold-bright:#C9A04E;
+    --olive:#5C6B3A;
+    --olive-soft:#7C8A56;
+    --kraft:#B98948;
+    --ivory:#FBF6EA;
+    --shadow: 0 10px 30px rgba(62,32,5,0.12);
+    --serif-display: 'Playfair Display', serif;
+    --serif-script: 'Cormorant Garamond', serif;
+    --serif-body: 'Lora', serif;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--cream);
+    color:var(--brown);
+    font-family:var(--serif-body);
+    overflow-x:hidden;
+    line-height:1.7;
+  }
+
+  ::selection{background:var(--gold-bright); color:var(--ivory);}
+
+  a{color:inherit; text-decoration:none;}
+
+  img{max-width:100%; display:block;}
+
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  /* Texture overlay */
+  .texture{
+    position:fixed; inset:0; pointer-events:none; z-index:9999;
+    opacity:0.035; mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='3' stitchTiles='stitch' type='fractalNoise'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ===== Rope Divider ===== */
+  .rope-divider{
+    display:flex; align-items:center; justify-content:center; gap:14px;
+    padding:38px 0;
+  }
+  .rope-divider .line{
+    height:2px; width:90px;
+    background:linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .rope-divider .mark{
+    width:9px; height:9px; transform:rotate(45deg);
+    background:var(--gold-bright);
+    box-shadow:0 0 8px rgba(201,160,78,0.5);
+  }
+
+  /* ===== Top Nav ===== */
+  header.site{
+    position:sticky; top:0; z-index:500;
+    background:rgba(246,239,221,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(156,122,46,0.25);
+  }
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 32px;
+    max-width:1180px; margin:0 auto;
+  }
+  .brandmark{
+    display:flex; align-items:center; gap:10px;
+    font-family:var(--serif-display);
+    font-size:1.05rem; letter-spacing:0.04em;
+    color:var(--brown); font-weight:600;
+  }
+  .brandmark .tree-icon{width:34px; height:34px;}
+  nav.links{display:flex; gap:34px; align-items:center;}
+  nav.links a{
+    font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--brown-soft); font-weight:600;
+    position:relative; padding-bottom:4px;
+    transition:color .25s ease;
+  }
+  nav.links a::after{
+    content:''; position:absolute; left:0; bottom:0; width:0; height:1px;
+    background:var(--gold-bright); transition:width .3s ease;
+  }
+  nav.links a:hover{color:var(--brown);}
+  nav.links a:hover::after{width:100%;}
+  .nav-cta{
+    font-size:0.74rem; letter-spacing:0.1em; text-transform:uppercase;
+    background:var(--brown); color:var(--ivory)!important;
+    padding:11px 22px; border-radius:2px; font-weight:600;
+    box-shadow:var(--shadow);
+    transition:transform .2s ease, background .2s ease;
+  }
+  .nav-cta:hover{background:var(--olive); transform:translateY(-1px);}
+  .menu-toggle{display:none; background:none; border:none; cursor:pointer; color:var(--brown);}
+
+  @media (max-width:880px){
+    nav.links{display:none;}
+    .menu-toggle{display:block;}
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;
+    padding:100px 32px 70px;
+    text-align:center;
+    overflow:hidden;
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(201,160,78,0.18), transparent 60%),
+      var(--cream);
+  }
+  .hero-eyebrow{
+    font-family:var(--serif-script);
+    font-style:italic;
+    font-size:1.05rem;
+    color:var(--olive);
+    letter-spacing:0.04em;
+    margin-bottom:18px;
+  }
+  .hero h1{
+    font-family:var(--serif-display);
+    font-weight:700;
+    font-size:clamp(2.6rem, 6vw, 4.6rem);
+    line-height:1.05;
+    color:var(--brown);
+    max-width:920px;
+    margin:0 auto 22px;
+  }
+  .hero h1 .accent{
+    font-style:italic; font-weight:600; color:var(--gold);
+    position:relative;
+  }
+  .hero-sub{
+    max-width:560px; margin:0 auto 36px;
+    color:var(--brown-soft);
+    font-size:1.08rem;
+  }
+  .hero-scripture{
+    font-family:var(--serif-script); font-style:italic;
+    font-size:1.15rem; color:var(--brown-soft);
+    max-width:600px; margin:0 auto 8px;
+  }
+  .hero-ref{
+    font-size:0.78rem; letter-spacing:0.15em; text-transform:uppercase;
+    color:var(--gold); margin-bottom:46px;
+  }
+
+  .hero-ctas{
+    display:flex; gap:18px; justify-content:center; flex-wrap:wrap;
+    margin-bottom:60px;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:15px 30px;
+    font-size:0.82rem; letter-spacing:0.1em; text-transform:uppercase; font-weight:600;
+    border-radius:2px;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .btn-primary{
+    background:var(--brown); color:var(--ivory);
+    box-shadow:var(--shadow);
+  }
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 14px 34px rgba(62,32,5,0.22);}
+  .btn-secondary{
+    background:transparent; color:var(--brown);
+    border:1.5px solid var(--gold);
+  }
+  .btn-secondary:hover{background:rgba(156,122,46,0.1); transform:translateY(-2px);}
+
+  /* Tree of Life Signature SVG */
+  .tree-stage{
+    position:relative;
+    max-width:480px; margin:0 auto;
+  }
+  .tree-stage svg{width:100%; height:auto; display:block;}
+  .tree-glow{filter:drop-shadow(0 0 18px rgba(201,160,78,0.55));}
+
+  .roots-grow path{
+    stroke-dasharray:340;
+    stroke-dashoffset:340;
+    animation:growRoot 2.6s ease forwards;
+  }
+  @keyframes growRoot{ to{ stroke-dashoffset:0; } }
+  .leaf-pop{
+    opacity:0; transform:scale(0.4);
+    animation:popLeaf .6s ease forwards;
+  }
+  @keyframes popLeaf{ to{opacity:1; transform:scale(1);} }
+
+  @media (prefers-reduced-motion: reduce){
+    .roots-grow path, .leaf-pop{ animation:none !important; opacity:1; stroke-dashoffset:0; transform:scale(1); }
+  }
+
+  /* ===== SECTION LABELS ===== */
+  .section{padding:90px 32px;}
+  .section.tight{padding:60px 32px;}
+  .section-head{text-align:center; max-width:680px; margin:0 auto 56px;}
+  .eyebrow{
+    font-size:0.74rem; letter-spacing:0.22em; text-transform:uppercase;
+    color:var(--olive); font-weight:700; margin-bottom:14px;
+  }
+  .section-head h2{
+    font-family:var(--serif-display); font-weight:700;
+    font-size:clamp(2rem,4vw,2.7rem);
+    color:var(--brown); margin-bottom:16px;
+  }
+  .section-head p{color:var(--brown-soft); font-size:1.02rem;}
+
+  /* ===== ROOT MAP (signature element) — 3 ministry pillars connected to one root system ===== */
+  .roots-section{
+    background:var(--parchment);
+    position:relative;
+  }
+  .pillars{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:36px;
+    max-width:1100px; margin:0 auto;
+    position:relative;
+  }
+  .pillar{
+    background:var(--ivory);
+    border:1px solid rgba(156,122,46,0.3);
+    border-radius:3px;
+    padding:40px 30px 34px;
+    text-align:center;
+    position:relative;
+    box-shadow:0 8px 24px rgba(62,32,5,0.06);
+    transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .pillar:hover{transform:translateY(-6px); box-shadow:0 18px 34px rgba(62,32,5,0.12);}
+  .pillar .icon{width:52px; height:52px; margin:0 auto 20px; color:var(--gold);}
+  .pillar h3{
+    font-family:var(--serif-display); font-size:1.4rem; color:var(--brown); margin-bottom:12px;
+  }
+  .pillar p{color:var(--brown-soft); font-size:0.95rem; margin-bottom:22px;}
+  .pillar a.pillar-link{
+    font-size:0.76rem; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--olive); font-weight:700; border-bottom:1px solid var(--olive-soft);
+    padding-bottom:3px;
+  }
+  .pillar a.pillar-link:hover{color:var(--brown);}
+
+  .root-connector{
+    text-align:center; margin-top:8px;
+  }
+  .root-connector svg{width:100%; max-width:700px; height:60px;}
+
+  @media (max-width:880px){
+    .pillars{grid-template-columns:1fr; gap:26px;}
+  }
+
+  /* ===== DAILY DEVOTION CARD ===== */
+  .devotion-section{
+    background:var(--cream);
+  }
+  .devotion-card{
+    max-width:760px; margin:0 auto;
+    background:var(--ivory);
+    border:1px solid rgba(156,122,46,0.35);
+    border-radius:4px;
+    padding:54px 56px;
+    position:relative;
+    box-shadow:var(--shadow);
+  }
+  .devotion-card::before, .devotion-card::after{
+    content:'❧'; position:absolute; font-size:1.6rem; color:var(--gold);
+    opacity:0.6;
+  }
+  .devotion-card::before{top:22px; left:26px;}
+  .devotion-card::after{bottom:22px; right:26px; transform:rotate(180deg);}
+  .devotion-date{
+    text-align:center; font-size:0.74rem; letter-spacing:0.18em; text-transform:uppercase;
+    color:var(--gold); margin-bottom:20px;
+  }
+  .devotion-verse{
+    font-family:var(--serif-script); font-style:italic; font-size:1.3rem;
+    text-align:center; color:var(--brown); max-width:560px; margin:0 auto 10px;
+  }
+  .devotion-ref{
+    text-align:center; font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--olive); margin-bottom:30px;
+  }
+  .devotion-body{
+    color:var(--brown-soft); font-size:1.02rem; text-align:left;
+    max-width:600px; margin:0 auto;
+  }
+  .devotion-body p{margin-bottom:16px;}
+  .devotion-close{
+    text-align:center; margin-top:28px;
+    font-family:var(--serif-script); font-style:italic; font-size:1.1rem;
+    color:var(--gold);
+  }
+  .devotion-archive{
+    text-align:center; margin-top:30px;
+  }
+  .devotion-archive a{
+    font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--brown-soft); border-bottom:1px solid var(--gold);
+    padding-bottom:3px;
+  }
+
+  /* ===== SHOP PREVIEW ===== */
+  .shop-section{background:var(--parchment);}
+  .shop-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:26px;
+    max-width:1180px; margin:0 auto 50px;
+  }
+  .product-card{
+    background:var(--ivory);
+    border:1px solid rgba(156,122,46,0.25);
+    border-radius:3px;
+    overflow:hidden;
+    transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .product-card:hover{transform:translateY(-5px); box-shadow:0 16px 30px rgba(62,32,5,0.12);}
+  .product-image{
+    aspect-ratio:1/1;
+    background:linear-gradient(145deg, #E9DCB8, #D9C496);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--gold);
+    position:relative;
+    overflow:hidden;
+  }
+  .product-image svg{width:46%; height:46%; opacity:0.8;}
+  .product-tag{
+    position:absolute; top:12px; left:12px;
+    background:var(--brown); color:var(--ivory);
+    font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase;
+    padding:5px 10px; border-radius:2px;
+  }
+  .product-info{padding:20px 20px 24px;}
+  .product-scripture{
+    font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--gold); margin-bottom:6px;
+  }
+  .product-info h4{
+    font-family:var(--serif-display); font-size:1.1rem; color:var(--brown); margin-bottom:8px;
+  }
+  .product-info p{font-size:0.86rem; color:var(--brown-soft); margin-bottom:14px;}
+  .product-price-row{display:flex; align-items:center; justify-content:space-between;}
+  .product-price{font-weight:600; color:var(--brown); font-size:0.95rem;}
+  .product-cta{
+    font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--olive); font-weight:700;
+  }
+  @media (max-width:980px){.shop-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.shop-grid{grid-template-columns:1fr;}}
+
+  .shop-all-wrap{text-align:center;}
+
+  /* ===== PRAYER WALL ===== */
+  .prayer-section{
+    background:var(--brown);
+    color:var(--ivory);
+    position:relative;
+  }
+  .prayer-section .eyebrow{color:var(--gold-bright);}
+  .prayer-section .section-head h2{color:var(--ivory);}
+  .prayer-section .section-head p{color:rgba(251,246,234,0.78);}
+
+  .prayer-tabs{
+    display:flex; justify-content:center; gap:14px; margin-bottom:46px;
+  }
+  .prayer-tab{
+    padding:11px 26px; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase;
+    border:1px solid rgba(201,160,78,0.45); border-radius:30px;
+    color:rgba(251,246,234,0.8); cursor:pointer;
+    transition:all .25s ease;
+  }
+  .prayer-tab.active{background:var(--gold-bright); color:var(--brown); border-color:var(--gold-bright); font-weight:700;}
+
+  .prayer-panel{max-width:680px; margin:0 auto;}
+
+  .prayer-form{
+    background:rgba(251,246,234,0.06);
+    border:1px solid rgba(201,160,78,0.3);
+    border-radius:4px;
+    padding:40px;
+  }
+  .form-row{margin-bottom:20px;}
+  .form-row label{
+    display:block; font-size:0.74rem; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--gold-bright); margin-bottom:8px;
+  }
+  .form-row input, .form-row textarea, .form-row select{
+    width:100%; padding:13px 16px;
+    background:rgba(251,246,234,0.95);
+    border:1px solid rgba(201,160,78,0.4);
+    border-radius:2px;
+    color:var(--brown);
+    font-family:var(--serif-body);
+    font-size:0.95rem;
+  }
+  .form-row textarea{resize:vertical; min-height:110px;}
+  .form-row.checkrow{display:flex; align-items:center; gap:10px;}
+  .form-row.checkrow label{margin:0; font-size:0.85rem; letter-spacing:0; text-transform:none; color:rgba(251,246,234,0.85);}
+  .form-submit{
+    width:100%; padding:15px; margin-top:6px;
+    background:var(--gold-bright); color:var(--brown);
+    border:none; border-radius:2px;
+    font-size:0.82rem; letter-spacing:0.1em; text-transform:uppercase; font-weight:700;
+    cursor:pointer; transition:background .25s ease;
+  }
+  .form-submit:hover{background:#dab768;}
+  .form-note{
+    text-align:center; font-size:0.82rem; color:rgba(251,246,234,0.6); margin-top:14px;
+  }
+
+  .wall-list{display:flex; flex-direction:column; gap:16px;}
+  .wall-item{
+    background:rgba(251,246,234,0.06);
+    border:1px solid rgba(201,160,78,0.25);
+    border-radius:4px;
+    padding:24px 28px;
+  }
+  .wall-item-top{
+    display:flex; justify-content:space-between; align-items:baseline;
+    margin-bottom:10px;
+  }
+  .wall-name{font-weight:600; color:var(--gold-bright); font-size:0.92rem;}
+  .wall-time{font-size:0.74rem; color:rgba(251,246,234,0.5);}
+  .wall-text{color:rgba(251,246,234,0.88); font-size:0.95rem; margin-bottom:14px;}
+  .wall-pray-btn{
+    display:inline-flex; align-items:center; gap:7px;
+    font-size:0.74rem; letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--gold-bright); cursor:pointer; font-weight:700;
+    background:none; border:none; padding:0;
+  }
+  .wall-pray-btn .count{color:rgba(251,246,234,0.55); font-weight:400; letter-spacing:0;}
+
+  /* ===== CUSTOM ORDER ===== */
+  .custom-section{background:var(--cream);}
+  .custom-wrap{
+    display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;
+    max-width:1100px; margin:0 auto;
+  }
+  .custom-copy .eyebrow{margin-bottom:14px;}
+  .custom-copy h2{
+    font-family:var(--serif-display); font-weight:700; font-size:2.3rem; color:var(--brown); margin-bottom:18px;
+  }
+  .custom-copy p{color:var(--brown-soft); margin-bottom:18px;}
+  .custom-steps{list-style:none; margin:26px 0 30px;}
+  .custom-steps li{
+    display:flex; gap:14px; margin-bottom:16px; align-items:flex-start;
+  }
+  .custom-steps .step-num{
+    flex-shrink:0; width:30px; height:30px; border-radius:50%;
+    background:var(--brown); color:var(--ivory);
+    display:flex; align-items:center; justify-content:center;
+    font-size:0.8rem; font-family:var(--serif-display); font-weight:600;
+  }
+  .custom-steps .step-text{color:var(--brown-soft); font-size:0.95rem; padding-top:4px;}
+
+  .custom-form{
+    background:var(--ivory); border:1px solid rgba(156,122,46,0.3);
+    border-radius:4px; padding:42px;
+    box-shadow:var(--shadow);
+  }
+  .custom-form .form-row label{color:var(--olive); }
+  .custom-form .form-row input, .custom-form .form-row select, .custom-form .form-row textarea{
+    background:var(--cream); border:1px solid rgba(156,122,46,0.3); color:var(--brown);
+  }
+  .custom-form .form-submit{background:var(--brown); color:var(--ivory);}
+  .custom-form .form-submit:hover{background:var(--olive);}
+
+  @media (max-width:880px){
+    .custom-wrap{grid-template-columns:1fr; gap:36px;}
+  }
+
+  /* ===== ABOUT / MISSION STRIP ===== */
+  .mission-strip{
+    background:var(--olive); color:var(--ivory);
+    padding:70px 32px; text-align:center;
+  }
+  .mission-strip p.lead{
+    font-family:var(--serif-script); font-style:italic; font-size:1.5rem;
+    max-width:760px; margin:0 auto 18px;
+  }
+  .mission-strip p.sub{
+    max-width:600px; margin:0 auto; opacity:0.85; font-size:0.95rem;
+  }
+
+  /* ===== NEWSLETTER ===== */
+  .newsletter-section{
+    background:var(--parchment); text-align:center;
+  }
+  .newsletter-box{
+    max-width:560px; margin:0 auto;
+  }
+  .newsletter-form{
+    display:flex; gap:12px; margin-top:26px;
+  }
+  .newsletter-form input{
+    flex:1; padding:15px 18px;
+    border:1px solid rgba(156,122,46,0.4);
+    background:var(--ivory); border-radius:2px;
+    font-family:var(--serif-body); color:var(--brown);
+  }
+  .newsletter-form button{
+    padding:15px 26px;
+    background:var(--brown); color:var(--ivory);
+    border:none; border-radius:2px;
+    font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; font-weight:700;
+    cursor:pointer;
+  }
+  .newsletter-form button:hover{background:var(--olive);}
+  @media (max-width:520px){.newsletter-form{flex-direction:column;}}
+
+  /* ===== FOOTER ===== */
+  footer.site{
+    background:var(--brown); color:rgba(251,246,234,0.75);
+    padding:70px 32px 30px;
+  }
+  .footer-grid{
+    display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr;
+    gap:40px; max-width:1180px; margin:0 auto 50px;
+  }
+  .footer-brand .brandmark{color:var(--ivory); margin-bottom:14px;}
+  .footer-brand p{font-size:0.88rem; max-width:280px; margin-bottom:18px; opacity:0.85;}
+  .footer-tagline{font-family:var(--serif-script); font-style:italic; color:var(--gold-bright); font-size:1rem;}
+  .footer-col h5{
+    font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--gold-bright); margin-bottom:18px;
+  }
+  .footer-col a{
+    display:block; font-size:0.88rem; margin-bottom:11px; opacity:0.82;
+    transition:opacity .2s ease;
+  }
+  .footer-col a:hover{opacity:1; color:var(--gold-bright);}
+  .footer-bottom{
+    border-top:1px solid rgba(201,160,78,0.2);
+    max-width:1180px; margin:0 auto; padding-top:26px;
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;
+    font-size:0.78rem; opacity:0.6;
+  }
+  @media (max-width:880px){
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:560px){
+    .footer-grid{grid-template-columns:1fr;}
+  }
+
+  /* Scroll reveal */
+  .reveal{opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.visible{opacity:1; transform:translateY(0);}
+
+  /* Toast */
+  .toast{
+    position:fixed; bottom:30px; left:50%; transform:translateX(-50%) translateY(20px);
+    background:var(--brown); color:var(--ivory);
+    padding:16px 28px; border-radius:3px; box-shadow:var(--shadow);
+    font-size:0.88rem; opacity:0; pointer-events:none;
+    transition:opacity .35s ease, transform .35s ease;
+    z-index:1000;
+    border:1px solid var(--gold);
+  }
+  .toast.show{opacity:1; transform:translateX(-50%) translateY(0);}
+
+</style>
+</head>
+<body>
+
+<div class="texture"></div>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site">
+  <div class="nav-inner">
+    <div class="brandmark">
+      <svg class="tree-icon" viewBox="0 0 60 60" fill="none">
+        <circle cx="30" cy="30" r="28" stroke="#9C7A2E" stroke-width="1.4"/>
+        <path d="M30 44V30M30 30C30 30 22 28 20 20M30 30C30 30 38 28 40 20M30 30C30 22 24 16 18 14M30 30C30 22 36 16 42 14" stroke="#5C6B3A" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M30 44C26 44 22 47 19 49M30 44C34 44 38 47 41 49" stroke="#3E2005" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+      Covered in His Glory
+    </div>
+    <nav class="links">
+      <a href="#shop">Shop</a>
+      <a href="#devotion">Devotion</a>
+      <a href="#prayer">Prayer Wall</a>
+      <a href="#custom">Custom Orders</a>
+      <a href="#about">Our Story</a>
+    </nav>
+    <a href="#shop" class="nav-cta">Shop Now</a>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-eyebrow">Handcrafted with Prayer &amp; Purpose</div>
+  <h1>Faith woven into <span class="accent">every detail</span> of life.</h1>
+  <p class="hero-sub">Crochet prayer blankets, kneeling cushions, faith backpacks, and sacred reminders — each one prayerfully handcrafted to place God's Word where you can see it, remember it, and live by it.</p>
+  <p class="hero-scripture">&ldquo;That you may look upon it and remember all the commandments of the LORD and do them.&rdquo;</p>
+  <p class="hero-ref">— Numbers 15:39</p>
+
+  <div class="hero-ctas">
+    <a href="#shop" class="btn btn-primary">Shop the Collection</a>
+    <a href="#prayer" class="btn btn-secondary">Share a Prayer Request</a>
+  </div>
+
+  <div class="tree-stage">
+    <svg viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="glow" cx="50%" cy="38%" r="40%">
+          <stop offset="0%" stop-color="#FCE7A8" stop-opacity="0.9"/>
+          <stop offset="100%" stop-color="#FCE7A8" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <circle cx="200" cy="120" r="90" fill="url(#glow)" class="tree-glow"/>
+      <!-- trunk -->
+      <path d="M200 230 L200 130" stroke="#5A3A18" stroke-width="7" stroke-linecap="round"/>
+      <!-- branches -->
+      <g stroke="#5A3A18" stroke-width="4" stroke-linecap="round" fill="none">
+        <path d="M200 170 C180 150 150 145 130 110"/>
+        <path d="M200 170 C220 150 250 145 270 110"/>
+        <path d="M200 145 C190 120 170 100 150 70"/>
+        <path d="M200 145 C210 120 230 100 250 70"/>
+        <path d="M200 130 L200 60"/>
+      </g>
+      <!-- leaves clusters -->
+      <g class="leaf-pop" style="animation-delay:1.6s">
+        <ellipse cx="130" cy="100" rx="34" ry="24" fill="#7C8A56" opacity="0.85"/>
+        <ellipse cx="270" cy="100" rx="34" ry="24" fill="#7C8A56" opacity="0.85"/>
+        <ellipse cx="150" cy="62" rx="30" ry="22" fill="#5C6B3A" opacity="0.9"/>
+        <ellipse cx="250" cy="62" rx="30" ry="22" fill="#5C6B3A" opacity="0.9"/>
+        <ellipse cx="200" cy="46" rx="36" ry="26" fill="#7C8A56" opacity="0.9"/>
+      </g>
+      <!-- roots -->
+      <g class="roots-grow" stroke="#5A3A18" stroke-width="3.4" stroke-linecap="round" fill="none">
+        <path d="M200 230 C185 245 160 250 130 268"/>
+        <path d="M200 230 C215 245 240 250 270 268"/>
+        <path d="M200 230 C200 250 200 262 200 282"/>
+        <path d="M200 230 C190 248 175 258 150 278" style="animation-delay:.3s"/>
+        <path d="M200 230 C210 248 225 258 250 278" style="animation-delay:.3s"/>
+      </g>
+      <circle cx="200" cy="140" r="4" fill="#FCE7A8" class="tree-glow"/>
+    </svg>
+  </div>
+</section>
+
+<div class="rope-divider"><div class="line"></div><div class="mark"></div><div class="line"></div></div>
+
+<!-- ===================== THREE MINISTRY PILLARS — signature root system ===================== -->
+<section class="roots-section section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">One Root, Three Branches</div>
+      <h2>A shop. A devotional. A place to be prayed for.</h2>
+      <p>Everything here grows from the same root — Numbers 15:39. Shop a handcrafted reminder, read today's word, or share what's on your heart and let our community pray over it with you.</p>
+    </div>
+
+    <div class="pillars reveal">
+      <div class="pillar">
+        <svg class="icon" viewBox="0 0 48 48" fill="none"><rect x="8" y="16" width="32" height="26" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 22h32" stroke="currentColor" stroke-width="2"/><path d="M17 16v-2a7 7 0 0114 0v2" stroke="currentColor" stroke-width="2"/></svg>
+        <h3>Shop Sacred Reminders</h3>
+        <p>Prayer blankets, faith backpacks, kneeling cushions, and wearable Scripture — handcrafted one at a time.</p>
+        <a href="#shop" class="pillar-link">Browse the shop →</a>
+      </div>
+      <div class="pillar">
+        <svg class="icon" viewBox="0 0 48 48" fill="none"><path d="M12 8h18l6 6v26H12z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M30 8v6h6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M18 22h12M18 28h12M18 34h8" stroke="currentColor" stroke-width="2"/></svg>
+        <h3>Today's Devotion</h3>
+        <p>A short Scripture and reflection rooted in Numbers 15:39, written to help you look, remember, and live it out.</p>
+        <a href="#devotion" class="pillar-link">Read today's word →</a>
+      </div>
+      <div class="pillar">
+        <svg class="icon" viewBox="0 0 48 48" fill="none"><path d="M24 6c-7 0-12 5-12 12 0 9 12 22 12 22s12-13 12-22c0-7-5-12-12-12z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M24 14v10M19 19h10" stroke="currentColor" stroke-width="2"/></svg>
+        <h3>Prayer Wall</h3>
+        <p>Share what's heavy on your heart privately, or let our community stand with you and pray it through together.</p>
+        <a href="#prayer" class="pillar-link">Share a request →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DAILY DEVOTION ===================== -->
+<section class="devotion-section section" id="devotion">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Look. Remember. Live.</div>
+      <h2>Today's Devotion</h2>
+      <p>A small word for an ordinary day — written the same way we make everything else here: slowly, and with you in mind.</p>
+    </div>
+
+    <div class="devotion-card reveal">
+      <div class="devotion-date">Monday, June 22</div>
+      <p class="devotion-verse">&ldquo;He will cover you with his feathers, and under his wings you will find refuge; his faithfulness will be your shield and rampart.&rdquo;</p>
+      <p class="devotion-ref">Psalm 91:4</p>
+      <div class="devotion-body">
+        <p>There is a difference between being told you're covered and actually feeling it. Some mornings the weight of what you're carrying makes the second one hard to believe.</p>
+        <p>This verse doesn't say He covers you from a distance. It says <em>feathers</em> — close, soft, near enough to feel. Refuge isn't a place you have to travel to find. It's wherever you are right now, the moment you stop trying to shield yourself and let Him do it instead.</p>
+        <p>Whatever today is asking of you, you don't have to carry it uncovered.</p>
+      </div>
+      <p class="devotion-close">Look. Remember. Live.</p>
+    </div>
+
+    <div class="devotion-archive">
+      <a href="#">Read past devotions →</a>
+    </div>
+  </div>
+</section>
+
+<div class="rope-divider"><div class="line"></div><div class="mark"></div><div class="line"></div></div>
+
+<!-- ===================== SHOP PREVIEW ===================== -->
+<section class="shop-section section" id="shop">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Handcrafted, One at a Time</div>
+      <h2>Shop the Collection</h2>
+      <p>Every piece begins with a Scripture, not a SKU. Here is what's currently being made.</p>
+    </div>
+
+    <div class="shop-grid reveal">
+
+      <div class="product-card">
+        <div class="product-image">
+          <span class="product-tag">Best Loved</span>
+          <svg viewBox="0 0 60 60" fill="none"><path d="M30 48V20M30 20c0 0-10-2-13-12M30 20c0 0 10-2 13-12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="14" y="40" width="32" height="6" rx="1" fill="currentColor" opacity="0.3"/></svg>
+        </div>
+        <div class="product-info">
+          <div class="product-scripture">Psalm 91:4</div>
+          <h4>The Prayer Blanket</h4>
+          <p>Sheltered under His wings — a crochet blanket with four corner Remembrance Tags.</p>
+          <div class="product-price-row">
+            <span class="product-price">From $65</span>
+            <span class="product-cta">View →</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <svg viewBox="0 0 60 60" fill="none"><rect x="14" y="20" width="32" height="30" rx="4" stroke="currentColor" stroke-width="2"/><path d="M22 20v-4a8 8 0 0116 0v4" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <div class="product-info">
+          <div class="product-scripture">Psalm 23:4</div>
+          <h4>Valley Walker Backpack</h4>
+          <p>Carry His truth through every valley — embroidered Psalm 23:4 patch.</p>
+          <div class="product-price-row">
+            <span class="product-price">From $45</span>
+            <span class="product-cta">View →</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <svg viewBox="0 0 60 60" fill="none"><path d="M30 46V28M30 28c0 0-8-2-10-10M30 28c0 0 8-2 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><ellipse cx="30" cy="46" rx="16" ry="3" fill="currentColor" opacity="0.25"/></svg>
+        </div>
+        <div class="product-info">
+          <div class="product-scripture">Psalm 52:8</div>
+          <h4>The Olive Tree Cushion</h4>
+          <p>A place to kneel. A heart set on Him — handcrafted kneeling prayer cushion.</p>
+          <div class="product-price-row">
+            <span class="product-price">From $45</span>
+            <span class="product-cta">View →</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="22" r="8" stroke="currentColor" stroke-width="2"/><path d="M30 30v18M22 40h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <div class="product-info">
+          <div class="product-scripture">Proverbs 7:3</div>
+          <h4>Sacred Reminder</h4>
+          <p>His Word, close to you, always — wearable faith jewelry and keepsakes.</p>
+          <div class="product-price-row">
+            <span class="product-price">From $18</span>
+            <span class="product-cta">View →</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="shop-all-wrap reveal">
+      <a href="#" class="btn btn-primary">View Full Shop on Etsy</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MISSION STRIP ===================== -->
+<section class="mission-strip" id="about">
+  <p class="lead reveal">"We believe faith should be woven into every detail of life — not only spoken, but lived, worn, and carried."</p>
+  <p class="sub reveal">Every product is made by hand, one at a time, with care and prayer. We don't mass-produce — we create with purpose, knowing what we make may become a cherished heirloom, a source of daily encouragement, or a lifeline in someone's darkest hour.</p>
+</section>
+
+<!-- ===================== PRAYER WALL ===================== -->
+<section class="prayer-section section" id="prayer">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">You Are Not Carrying This Alone</div>
+      <h2>Share What's On Your Heart</h2>
+      <p>Tell us privately and let only us pray with you — or share it on the wall and let this whole community stand with you. Either way, it will be read, and it will be prayed over.</p>
+    </div>
+
+    <div class="prayer-tabs reveal">
+      <div class="prayer-tab active" onclick="switchPrayerTab('private')">Private Request</div>
+      <div class="prayer-tab" onclick="switchPrayerTab('public')">Prayer Wall</div>
+    </div>
+
+    <div class="prayer-panel reveal">
+
+      <!-- PRIVATE FORM -->
+      <div id="panel-private">
+        <form class="prayer-form" onsubmit="submitPrayer(event,'private')">
+          <div class="form-row">
+            <label>Your First Name</label>
+            <input type="text" placeholder="So we know who we're praying for" required>
+          </div>
+          <div class="form-row">
+            <label>Your Email (optional — only if you'd like a note back)</label>
+            <input type="email" placeholder="you@example.com">
+          </div>
+          <div class="form-row">
+            <label>What's on your heart?</label>
+            <textarea placeholder="Share as much or as little as you'd like. This stays between you and us." required></textarea>
+          </div>
+          <div class="form-row checkrow">
+            <input type="checkbox" id="anon-private">
+            <label for="anon-private">Keep my name fully anonymous, even to your team</label>
+          </div>
+          <button class="form-submit" type="submit">Send This Privately</button>
+          <p class="form-note">Read by our team only. Never shared, never sold, never public.</p>
+        </form>
+      </div>
+
+      <!-- PUBLIC WALL -->
+      <div id="panel-public" style="display:none;">
+        <form class="prayer-form" style="margin-bottom:34px;" onsubmit="submitPrayer(event,'public')">
+          <div class="form-row">
+            <label>Display Name</label>
+            <input type="text" placeholder="First name, or 'Anonymous'" required>
+          </div>
+          <div class="form-row">
+            <label>Your Prayer Request</label>
+            <textarea placeholder="This will be visible to others on the prayer wall, so share what feels right to make public." required></textarea>
+          </div>
+          <button class="form-submit" type="submit">Post to the Prayer Wall</button>
+          <p class="form-note">Every post is reviewed gently before it goes live — never delayed more than a day.</p>
+        </form>
+
+        <div class="wall-list">
+          <div class="wall-item">
+            <div class="wall-item-top">
+              <span class="wall-name">Anonymous</span>
+              <span class="wall-time">2 hours ago</span>
+            </div>
+            <p class="wall-text">Praying for peace over a hard diagnosis in my family this week. Asking God for strength for all of us, and healing if it's His will.</p>
+            <button class="wall-pray-btn">🙏 I'm praying for this <span class="count">— 38 praying</span></button>
+          </div>
+          <div class="wall-item">
+            <div class="wall-item-top">
+              <span class="wall-name">Marisol</span>
+              <span class="wall-time">Yesterday</span>
+            </div>
+            <p class="wall-text">Job interview Thursday after 8 months of searching. Praying for God's will and provision, whatever that looks like.</p>
+            <button class="wall-pray-btn">🙏 I'm praying for this <span class="count">— 61 praying</span></button>
+          </div>
+          <div class="wall-item">
+            <div class="wall-item-top">
+              <span class="wall-name">Anonymous</span>
+              <span class="wall-time">3 days ago</span>
+            </div>
+            <p class="wall-text">Marriage has felt distant lately. Praying for softened hearts and a fresh start for both of us.</p>
+            <button class="wall-pray-btn">🙏 I'm praying for this <span class="count">— 104 praying</span></button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CUSTOM ORDERS ===================== -->
+<section class="custom-section section" id="custom">
+  <div class="wrap">
+    <div class="custom-wrap">
+      <div class="custom-copy reveal">
+        <div class="eyebrow">Made Just for You</div>
+        <h2>Request a Custom Order</h2>
+        <p>A gift for a baptism, a blanket for someone walking through grief, a backpack for a child starting a hard season — tell us the story, and we'll handcraft something to carry it.</p>
+        <ul class="custom-steps">
+          <li>
+            <div class="step-num">1</div>
+            <div class="step-text">Tell us the occasion and who it's for</div>
+          </li>
+          <li>
+            <div class="step-num">2</div>
+            <div class="step-text">We'll reply within 24 hours with Scripture and design options</div>
+          </li>
+          <li>
+            <div class="step-num">3</div>
+            <div class="step-text">Your piece is handcrafted and prayed over before it ships</div>
+          </li>
+        </ul>
+        <p style="font-style:italic; color:var(--gold); font-family:var(--serif-script); font-size:1.1rem;">Every stitch points hearts back to the Lord.</p>
+      </div>
+
+      <div class="custom-form reveal">
+        <form onsubmit="submitCustom(event)">
+          <div class="form-row">
+            <label>Product Interested In</label>
+            <select required>
+              <option value="">Select one</option>
+              <option>Prayer Blanket</option>
+              <option>Valley Walker Backpack</option>
+              <option>Olive Tree Cushion</option>
+              <option>Sacred Reminder / Jewelry</option>
+              <option>Something else / not sure yet</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>Occasion</label>
+            <input type="text" placeholder="Baptism, memorial, graduation, just because...">
+          </div>
+          <div class="form-row">
+            <label>Preferred Scripture (if you have one)</label>
+            <input type="text" placeholder="Leave blank and we'll suggest one">
+          </div>
+          <div class="form-row">
+            <label>Tell us the story</label>
+            <textarea placeholder="Who is this for, and what would you like them to feel when they receive it?" required></textarea>
+          </div>
+          <div class="form-row">
+            <label>Your Email</label>
+            <input type="email" placeholder="you@example.com" required>
+          </div>
+          <button class="form-submit" type="submit">Send Custom Request</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== NEWSLETTER ===================== -->
+<section class="newsletter-section section tight">
+  <div class="newsletter-box reveal">
+    <div class="eyebrow">Stay Covered</div>
+    <h2 style="font-family:var(--serif-display); font-size:1.8rem; color:var(--brown); margin-bottom:10px;">A weekly word, sent gently.</h2>
+    <p style="color:var(--brown-soft); font-size:0.95rem;">One short devotion and an early look at new pieces — never more than once a week.</p>
+    <form class="newsletter-form" onsubmit="submitNewsletter(event)">
+      <input type="email" placeholder="you@example.com" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="brandmark">
+        <svg class="tree-icon" viewBox="0 0 60 60" fill="none">
+          <circle cx="30" cy="30" r="28" stroke="#C9A04E" stroke-width="1.4"/>
+          <path d="M30 44V30M30 30C30 30 22 28 20 20M30 30C30 30 38 28 40 20" stroke="#9C7A2E" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        Covered in His Glory
+      </div>
+      <p>Handcrafted with Prayer &amp; Purpose. Every stitch points hearts back to the Lord.</p>
+      <p class="footer-tagline">Look. Remember. Live.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Shop</h5>
+      <a href="#shop">Prayer Blankets</a>
+      <a href="#shop">Valley Walker Backpack</a>
+      <a href="#shop">Olive Tree Cushion</a>
+      <a href="#shop">Sacred Reminders</a>
+      <a href="#custom">Custom Orders</a>
+    </div>
+    <div class="footer-col">
+      <h5>Ministry</h5>
+      <a href="#devotion">Daily Devotion</a>
+      <a href="#prayer">Prayer Wall</a>
+      <a href="#about">Our Story</a>
+      <a href="#">Numbers 15:39</a>
+    </div>
+    <div class="footer-col">
+      <h5>Connect</h5>
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">Pinterest</a>
+      <a href="#">grace@coveredinhisglory.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Covered in His Glory. Handcrafted with Prayer &amp; Purpose.</span>
+    <span>Numbers 15:39 — Look. Remember. Live.</span>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); } });
+  }, {threshold:0.15});
+  reveals.forEach(el=>obs.observe(el));
+
+  function showToast(msg){
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(()=>t.classList.remove('show'), 3200);
+  }
+
+  function switchPrayerTab(which){
+    document.querySelectorAll('.prayer-tab').forEach(t=>t.classList.remove('active'));
+    const tabs = document.querySelectorAll('.prayer-tab');
+    if(which==='private'){ tabs[0].classList.add('active'); document.getElementById('panel-private').style.display='block'; document.getElementById('panel-public').style.display='none'; }
+    else { tabs[1].classList.add('active'); document.getElementById('panel-public').style.display='block'; document.getElementById('panel-private').style.display='none'; }
+  }
+
+  function submitPrayer(e, type){
+    e.preventDefault();
+    e.target.reset();
+    showToast(type==='private' ? "Your prayer request has been received — you are prayed over. 🌿" : "Thank you for sharing — your request will appear after a gentle review. 🌿");
+  }
+
+  function submitCustom(e){
+    e.preventDefault();
+    e.target.reset();
+    showToast("Your custom request has been received — we'll reply within 24 hours. 🌿");
+  }
+
+  function submitNewsletter(e){
+    e.preventDefault();
+    e.target.reset();
+    showToast("You're on the list — welcome to the family. 🌿");
+  }
+</script>
+
+</body>
+</html>

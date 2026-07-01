@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Covered in His Glory — Prayer Wall — Faith-Based Handmade Gifts</title>
+<meta name="description" content="Share what's on your heart privately, or post to the community prayer wall. Either way, it will be read and prayed over.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='28' fill='%23F6EFDD' stroke='%239C7A2E' stroke-width='2'/%3E%3Cpath d='M30 46V28M30 28c0 0-9-2-11-11M30 28c0 0 9-2 11-11' stroke='%235C6B3A' stroke-width='2.4' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="texture"></div>
+
+<header class="site">
+  <div class="nav-inner">
+    <a class="brandmark" href="index.html">
+      <svg class="tree-icon" viewBox="0 0 60 60" fill="none" aria-hidden="true">
+        <circle cx="30" cy="30" r="28" stroke="#9C7A2E" stroke-width="1.4"/>
+        <path d="M30 44V30M30 30C30 30 22 28 20 20M30 30C30 30 38 28 40 20M30 30C30 30 24 16 18 14M30 30C30 22 36 16 42 14" stroke="#5C6B3A" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M30 44C26 44 22 47 19 49M30 44C34 44 38 47 41 49" stroke="#3E2005" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+      Covered in His Glory
+    </a>
+    <nav class="links">
+      <a href="shop.html">Shop</a>
+      <a href="devotion.html">Devotion</a>
+      <a href="prayer.html" class="active">Prayer Wall</a>
+      <a href="custom-orders.html">Custom Orders</a>
+      <a href="about.html">Our Story</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="shop.html" class="nav-cta">Shop Now</a>
+    <button class="menu-toggle" aria-label="Open menu" onclick="openDrawer()">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="panel">
+    <div class="drawer-top">
+      <span class="brandmark" style="font-size:1rem;">Covered in His Glory</span>
+      <button class="drawer-close" aria-label="Close menu" onclick="closeDrawer()">&times;</button>
+    </div>
+    <a href="shop.html">Shop</a>
+    <a href="devotion.html">Devotion</a>
+    <a href="prayer.html" class="active">Prayer Wall</a>
+    <a href="custom-orders.html">Custom Orders</a>
+    <a href="about.html">Our Story</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</div>
+
+<section class="prayer-section section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">You Are Not Carrying This Alone</div>
+      <h2>Share What's On Your Heart</h2>
+      <p>Tell us privately and let only us pray with you — or share it on the wall and let this whole community stand with you. Either way, it will be read, and it will be prayed over.</p>
+    </div>
+
+    <div class="prayer-tabs reveal">
+      <div class="prayer-tab active" role="button" tabindex="0" onclick="switchPrayerTab('private')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();switchPrayerTab('private');}">Private Request</div>
+      <div class="prayer-tab" role="button" tabindex="0" onclick="switchPrayerTab('public')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();switchPrayerTab('public');}">Prayer Wall</div>
+    </div>
+
+    <div class="prayer-panel reveal">
+
+      <!-- PRIVATE FORM -->
+      <div id="panel-private">
+        <!-- TODO: replace PLACEHOLDER with your Formspree private-prayer form ID -->
+        <form class="prayer-form" action="https://formspree.io/f/PLACEHOLDER" method="POST" data-formspree data-success="Your prayer request has been received — you are prayed over. 🌿">
+          <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="_subject" value="Private prayer request — Covered in His Glory">
+          <div class="form-row">
+            <label for="p-name">Your First Name</label>
+            <input id="p-name" type="text" name="first_name" placeholder="So we know who we're praying for" required>
+          </div>
+          <div class="form-row">
+            <label for="p-email">Your Email (optional — only if you'd like a note back)</label>
+            <input id="p-email" type="email" name="email" placeholder="you@example.com">
+          </div>
+          <div class="form-row">
+            <label for="p-msg">What's on your heart?</label>
+            <textarea id="p-msg" name="request" placeholder="Share as much or as little as you'd like. This stays between you and us." required></textarea>
+          </div>
+          <div class="form-row checkrow">
+            <input type="checkbox" id="anon-private" name="keep_anonymous" value="yes">
+            <label for="anon-private">Keep my name fully anonymous, even to your team</label>
+          </div>
+          <button class="form-submit" type="submit">Send This Privately</button>
+          <p class="form-note">Read by our team only. Never shared, never sold, never public.</p>
+        </form>
+      </div>
+
+      <!-- PUBLIC WALL -->
+      <div id="panel-public" style="display:none;">
+        <!-- TODO: replace PLACEHOLDER with your Formspree prayer-wall form ID -->
+        <form class="prayer-form" style="margin-bottom:34px;" action="https://formspree.io/f/PLACEHOLDER" method="POST" data-formspree data-success="Thank you for sharing — your request will appear after a gentle review. 🌿">
+          <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="_subject" value="Prayer wall submission (needs review) — Covered in His Glory">
+          <div class="form-row">
+            <label for="w-name">Display Name</label>
+            <input id="w-name" type="text" name="display_name" placeholder="First name, or 'Anonymous'" required>
+          </div>
+          <div class="form-row">
+            <label for="w-msg">Your Prayer Request</label>
+            <textarea id="w-msg" name="request" placeholder="This will be visible to others on the prayer wall, so share what feels right to make public." required></textarea>
+          </div>
+          <button class="form-submit" type="submit">Post to the Prayer Wall</button>
+          <p class="form-note">Every post is reviewed gently before it goes live — never delayed more than a day.</p>
+        </form>
+
+        <div class="wall-list">
+          <div class="wall-item">
+            <div class="wall-item-top">
+              <span class="wall-name">Anonymous</span>
+              <span class="wall-time">2 hours ago</span>
+            </div>
+            <p class="wall-text">Praying for peace over a hard diagnosis in my family this week. Asking God for strength for all of us, and healing if it's His will.</p>
+            <button class="wall-pray-btn" type="button">🙏 I'm praying for this <span class="count">— 38 praying</span></button>
+          </div>
+          <div class="wall-item">
+            <div class="wall-item-top">
+              <span class="wall-name">Marisol</span>
+              <span class="wall-time">Yesterday</span>
+            </div>
+            <p class="wall-text">Job interview Thursday after 8 months of searching. Praying for God's will and provision, whatever that looks like.</p>
+            <button class="wall-pray-btn" type="button">🙏 I'm praying for this <span class="count">— 61 praying</span></button>
+          </div>
+          <div class="wall-item">
+            <div class="wall-item-top">
+              <span class="wall-name">Anonymous</span>
+              <span class="wall-time">3 days ago</span>
+            </div>
+            <p class="wall-text">Marriage has felt distant lately. Praying for softened hearts and a fresh start for both of us.</p>
+            <button class="wall-pray-btn" type="button">🙏 I'm praying for this <span class="count">— 104 praying</span></button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="brandmark">
+        <svg class="tree-icon" viewBox="0 0 60 60" fill="none" aria-hidden="true">
+          <circle cx="30" cy="30" r="28" stroke="#C9A04E" stroke-width="1.4"/>
+          <path d="M30 44V30M30 30C30 30 22 28 20 20M30 30C30 30 38 28 40 20" stroke="#9C7A2E" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        Covered in His Glory
+      </div>
+      <p>Handcrafted with Prayer &amp; Purpose. Every stitch points hearts back to the Lord.</p>
+      <p class="footer-tagline">Look. Remember. Live.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Shop</h5>
+      <a href="shop.html">Prayer Blankets</a>
+      <a href="shop.html">Valley Walker Backpack</a>
+      <a href="shop.html">Olive Tree Cushion</a>
+      <a href="shop.html">Sacred Reminders</a>
+      <a href="custom-orders.html">Custom Orders</a>
+    </div>
+    <div class="footer-col">
+      <h5>Ministry</h5>
+      <a href="devotion.html">Daily Devotion</a>
+      <a href="prayer.html">Prayer Wall</a>
+      <a href="about.html">Our Story</a>
+      <a href="about.html">Numbers 15:39</a>
+    </div>
+    <div class="footer-col">
+      <h5>Connect</h5>
+      <a href="https://instagram.com/CoveredInHisGlory" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://facebook.com/LookRememberLive" target="_blank" rel="noopener">Facebook</a>
+      <a href="contact.html">Pinterest</a>
+      <a href="mailto:grace@coveredinhisglory.com">grace@coveredinhisglory.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Covered in His Glory. Handcrafted with Prayer &amp; Purpose. · <a href="privacy.html" style="border-bottom:1px solid var(--gold);">Privacy</a> · <a href="terms.html" style="border-bottom:1px solid var(--gold);">Terms</a></span>
+    <span>Numbers 15:39 — Look. Remember. Live.</span>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
