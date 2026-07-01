@@ -218,6 +218,13 @@ nav.links a.active::after{width:100%;}
   max-width:480px; margin:0 auto;
 }
 .tree-stage svg{width:100%; height:auto; display:block;}
+.tree-stage .hero-logo{
+  width:100%; max-width:460px; height:auto; margin:0 auto; display:block;
+  filter:drop-shadow(0 12px 30px rgba(62,32,5,0.18));
+  animation:logoFade 1.2s ease both;
+}
+@keyframes logoFade{ from{opacity:0; transform:translateY(14px) scale(.97);} to{opacity:1; transform:translateY(0) scale(1);} }
+@media (prefers-reduced-motion: reduce){ .tree-stage .hero-logo{ animation:none; } }
 .tree-glow{filter:drop-shadow(0 0 18px rgba(201,160,78,0.55));}
 
 .roots-grow path{
