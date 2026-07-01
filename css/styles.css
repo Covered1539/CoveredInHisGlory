@@ -147,7 +147,7 @@ nav.links a.active::after{width:100%;}
 /* ===== HERO ===== */
 .hero{
   position:relative;
-  padding:100px 32px 70px;
+  padding:90px 32px 32px;
   text-align:center;
   overflow:hidden;
   background:
@@ -192,7 +192,7 @@ nav.links a.active::after{width:100%;}
 
 .hero-ctas{
   display:flex; gap:18px; justify-content:center; flex-wrap:wrap;
-  margin-bottom:60px;
+  margin-bottom:28px;
 }
 .btn{
   display:inline-flex; align-items:center; gap:8px;
@@ -215,7 +215,7 @@ nav.links a.active::after{width:100%;}
 /* Tree of Life Signature SVG */
 .tree-stage{
   position:relative;
-  max-width:480px; margin:0 auto;
+  max-width:520px; margin:0 auto;
 }
 .tree-stage svg{width:100%; height:auto; display:block;}
 .tree-stage .hero-logo{
