@@ -78,7 +78,7 @@ header.site{
   font-size:1.05rem; letter-spacing:0.04em;
   color:var(--brown); font-weight:600;
 }
-.brandmark .tree-icon{width:34px; height:34px;}
+.brandmark .tree-icon{width:34px; height:34px; object-fit:contain; display:block;}
 nav.links{display:flex; gap:34px; align-items:center;}
 nav.links a{
   font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase;
